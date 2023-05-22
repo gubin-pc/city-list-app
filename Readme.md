@@ -21,7 +21,7 @@ It definitely works for the **amd64** architecture. There may be problems with r
 Java 17 is required
 ```
 ./mvnw clean package
-java -jar target/fizzbuzz-app-0.0.1-SNAPSHOT.jar
+java -jar target/city-list-app-0.0.1-SNAPSHOT.jar
 ```
 
 ## Query examples

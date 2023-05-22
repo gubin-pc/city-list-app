@@ -23,7 +23,7 @@ class CityCrudRepositoryTest extends IntegrationTest {
         @Test
         void shouldUpdateCitySuccess() {
             //given
-            City city = new City(1L, "Tokyo" , "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/500px-Skyscrapers_of_Shinjuku_2009_January.jpg");
+            City city = new City(1L, "Tokyo", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/500px-Skyscrapers_of_Shinjuku_2009_January.jpg");
             City expected = new City(1L, "newName", "newPhoto");
 
             //when
@@ -54,7 +54,7 @@ class CityCrudRepositoryTest extends IntegrationTest {
         @Test
         void shouldThrowIfModelIsNull() {
             //then
-            Exception ex = assertThrows(
+            assertThrows(
                     NullPointerException.class,
                     () -> cityCrudRepository.update(null)
             );
@@ -66,7 +66,7 @@ class CityCrudRepositoryTest extends IntegrationTest {
         @Test
         void shouldFindByIdSuccess() {
             //given
-            City expected = new City(2L, "Jakarta","https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Jakarta_Pictures-1.jpg/327px-Jakarta_Pictures-1.jpg");
+            City expected = new City(2L, "Jakarta", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Jakarta_Pictures-1.jpg/327px-Jakarta_Pictures-1.jpg");
 
             //when
             Optional<City> actual = cityCrudRepository.findById(2L);

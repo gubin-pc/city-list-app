@@ -30,8 +30,6 @@ public class CityViewRepositoryTest extends IntegrationTest {
 
         //then
         assertEquals(size, cities.getContent().size());
-        cities.forEach(cityView -> {
-            assertTrue(cityView.name().startsWith(name));
-        });
+        cities.forEach(cityView -> assertTrue(cityView.name().startsWith(name)));
     }
 }

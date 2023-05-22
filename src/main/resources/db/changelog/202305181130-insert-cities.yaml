@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert cities form csv
+      author: gubin
+
+      changes:
+        - loadData:
+            tableName: city
+            file: db/changelog/cities.csv

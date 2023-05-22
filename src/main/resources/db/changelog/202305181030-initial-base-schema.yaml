@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: initial base schema
+      author: gubin
+
+      changes:
+        - createTable:
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: photo
+                  type: VARCHAR
+                  constraints:
+                    nullable: false

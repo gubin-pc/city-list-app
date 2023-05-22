@@ -3,7 +3,7 @@
 ## How to run
 ### In docker container
 
-- To run application on 8081 port use
+- To run application on 8080 port use
 ```
 ./mvnw clean package docker:build docker:run
 ```
